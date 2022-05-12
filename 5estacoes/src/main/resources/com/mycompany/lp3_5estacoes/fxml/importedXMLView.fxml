@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="anchorTableImport" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.mycompany.lp3_5estacoes.ImportedXMLViewController">
+   <children>
+      <TableView fx:id="tableImported" prefHeight="500.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="colLine" prefWidth="168.0" text="Linha" />
+          <TableColumn fx:id="colStation" prefWidth="240.0" text="Estação" />
+            <TableColumn fx:id="colPosition" prefWidth="91.0" text="Posição" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

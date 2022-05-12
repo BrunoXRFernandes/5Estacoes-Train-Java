@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lp3_5estacoes.CourseClientViewController">
+   <children>
+      <GridPane prefHeight="149.0" prefWidth="700.0" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="tableCourse" prefHeight="156.0" prefWidth="700.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="colStation" prefWidth="444.0" text="Estações" />
+                  <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="51.0" text="Preço" />
+                  <TableColumn fx:id="colNrEstacoes" prefWidth="38.0" text="Qtd" />
+                  <TableColumn fx:id="colDuration" prefWidth="74.0" text="Duração" />
+                  <TableColumn fx:id="colChangeOfLine" minWidth="0.0" prefWidth="54.0" text="N_Linhas" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+         </children>
+      </GridPane>
+      <ImageView fx:id="qrcode" fitHeight="300.0" fitWidth="300.0" layoutX="200.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

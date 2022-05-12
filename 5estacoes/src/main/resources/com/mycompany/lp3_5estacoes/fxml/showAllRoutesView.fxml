@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lp3_5estacoes.ShowAllRoutesViewController">
+    <AnchorPane fx:id="anchorRoutes" prefHeight="600.0" prefWidth="1200.0">  
+        <children>
+            <GridPane prefHeight="600.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="521.0" minHeight="10.0" prefHeight="512.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="295.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <TableView fx:id="tableRoutes" prefHeight="515.0" prefWidth="1200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colStations" prefWidth="962.0" text="Estacoes" />
+                            <TableColumn fx:id="colPrice" prefWidth="60.0" text="Preco" />
+                            <TableColumn fx:id="colQtt" prefWidth="43.0" text="Qtd" />
+                            <TableColumn fx:id="colDuration" prefWidth="78.0" text="Duração" />
+                            <TableColumn fx:id="colChangeOfLine" prefWidth="56.0" text="N_Linhas" />
+                        </columns>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </TableView>
+                    <Button fx:id="plan" mnemonicParsing="false" onAction="#btnPlan" prefWidth="80.0" text="Pagar" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets right="110.0" />
+                        </GridPane.margin>
+                    </Button>
+                    <Button fx:id="exit" mnemonicParsing="false" onAction="#btnExit" prefWidth="80.0" snapToPixel="false" text="Sair" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets right="10.0" />
+                        </GridPane.margin>
+                    </Button>
+                </children>
+            </GridPane>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="anchorPayment" prefHeight="600.0" prefWidth="1200.0" visible="false">
+        <children>
+            <Button fx:id="btntwoEuro" layoutX="340.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="340.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/moeda2.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btntenEuro" layoutX="24.0" layoutY="177.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="70.0" fitWidth="120.0" layoutX="24.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/nota10.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btnfiveEuro" layoutX="182.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="70.0" fitWidth="120.0" layoutX="182.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/nota5.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="tbnoneEuro" layoutX="436.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="436.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/moeda1.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btnfifitCent" layoutX="32.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="32.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/moeda50.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btntwentyCent" layoutX="153.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="153.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/Moeda20.PNG" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btntenCent" layoutX="273.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="273.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/moeda10.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="btnfiveCent" layoutX="406.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleBtn">
+                <graphic>
+                    <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="414.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../resources/moeda5.jpg" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="confirm" disable="true" layoutX="442.0" layoutY="465.0" mnemonicParsing="false" onAction="#btnConfirm" prefHeight="35.0" prefWidth="96.0" text="Confirmar" />
+            <Label fx:id="lbEfetueoPagamento" layoutX="153.0" layoutY="14.0" text="Pagamento">
+                <font>
+                    <Font name="System Bold Italic" size="33.0" />
+                </font>
+            </Label>
+            <Label fx:id="lbTotal" layoutX="58.0" layoutY="465.0" text="Valor introduzido">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="lbPreco" layoutX="32.0" layoutY="116.0" prefHeight="35.0" prefWidth="128.0" text="Preço Final">
+                <font>
+                    <Font name="System Italic" size="24.0" />
+                </font>
+            </Label>
+         <Label fx:id="lblPrice" layoutX="178.0" layoutY="123.0" text="0" />
+         <Label fx:id="lblPriceTtl" layoutX="273.0" layoutY="472.0" text="0" />
+         <Button fx:id="clean" layoutX="552.0" layoutY="465.0" mnemonicParsing="false" onAction="#btnClean" prefHeight="35.0" prefWidth="96.0" text="Limpar" />
+         <Button fx:id="back" layoutX="717.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnBack" text="Voltar" />
+         <Label layoutX="32.0" layoutY="84.0" text="Desconto">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label layoutX="32.0" layoutY="63.0" text="Preço Original">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lbloriginalPrice" layoutX="165.0" layoutY="63.0" text="Label" />
+         <Label fx:id="lblDiscount" layoutX="165.0" layoutY="84.0" text="Label" />
+         <Button fx:id="btnTwoCent" layoutX="520.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleBtn">
+            <graphic>
+               <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="414.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../resources/twoCentCoin.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="btnOneCent" layoutX="629.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleBtn">
+            <graphic>
+               <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="414.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../resources/oneCentCoin.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="anchorChange" prefHeight="600.0" prefWidth="1200.0" visible="false">
+        <children>
+            <ImageView fitHeight="191.0" fitWidth="128.0" layoutX="338.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/card.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="503.0" layoutY="37.0" text="Pagamento">
+                <font>
+                    <Font name="System Bold Italic" size="33.0" />
+                </font>
+            </Label>
+            <Label layoutX="492.0" layoutY="125.0" prefHeight="43.0" prefWidth="209.0" text="Recolha o Titulo">
+                <font>
+                    <Font name="System Italic" size="29.0" />
+                </font>
+            </Label>
+            <Label layoutX="539.0" layoutY="168.0" text="e o Troco">
+                <font>
+                   <Font name="System Italic" size="29.0" />
+                </font>
+            </Label>
+            <Label layoutX="462.0" layoutY="468.0" text="Troco">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="lblChange" layoutX="556.0" layoutY="468.0" text="0">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font></Label>
+            <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="402.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/moeda2.jpg" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="479.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/moeda1.jpg" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="55.0" layoutX="549.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/moeda50.jpg" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="617.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/Moeda20.PNG" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="67.0" layoutX="688.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/moeda10.jpg" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="58.0" layoutX="759.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../resources/moeda5.jpg" />
+                </image>
+            </ImageView>
+            <Label fx:id="lblTwoEuroChange" layoutX="418.0" layoutY="431.0" text="0x" />
+            <Label fx:id="lblOneEuroChange" layoutX="494.0" layoutY="431.0" text="0x" />
+            <Label fx:id="lblFiftyCentChange" layoutX="563.0" layoutY="431.0" text="0x" />
+            <Label fx:id="lblTwentyCentChange" layoutX="632.0" layoutY="431.0" text="0x" />
+            <Label fx:id="lblTenCentChange" layoutX="702.0" layoutY="431.0" text="0x" />
+            <Label fx:id="lblFiveCentChange" layoutX="774.0" layoutY="431.0" text="0x" />
+         <Button layoutX="677.0" layoutY="473.0" mnemonicParsing="false" onAction="#btnBackChange" text="Voltar" />
+         <ImageView fx:id="img_qrcode" fitHeight="191.0" fitWidth="209.0" layoutX="717.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fitHeight="60.0" fitWidth="58.0" layoutX="897.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../resources/oneCentCoin.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="60.0" fitWidth="58.0" layoutX="827.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../resources/twoCentCoin.png" />
+            </image>
+         </ImageView>
+         <Label fx:id="lblOneCentChange" layoutX="919.0" layoutY="431.0" text="0x" />
+         <Label fx:id="lblTwoCentChange" layoutX="849.0" layoutY="431.0" text="0x" />
+        </children>
+    </AnchorPane>
+</AnchorPane>

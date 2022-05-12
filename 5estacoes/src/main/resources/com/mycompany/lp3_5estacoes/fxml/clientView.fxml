@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lp3_5estacoes.ClientViewController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="571.0" prefWidth="782.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="btnSelectTrip" layoutX="19.0" layoutY="166.0" mnemonicParsing="false" onAction="#selectTrip" prefHeight="25.0" prefWidth="127.0" text="Selecionar Viagem" />
+                  <Button fx:id="btnLogOut" layoutX="64.0" layoutY="510.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="82.0" text="Sair" />
+                  <Label fx:id="name" layoutX="105.0" layoutY="342.0" text="name" />
+                  <Label alignment="CENTER" layoutX="2.0" layoutY="340.0" prefHeight="26.0" prefWidth="82.0" text="Nome" />
+                  <Button fx:id="btnProfile" layoutX="19.0" layoutY="299.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Ver Meu Perfil" visible="false" />
+                  <Button fx:id="btnCheckTrip" layoutX="19.0" layoutY="234.0" mnemonicParsing="false" onAction="#checkTrips" prefHeight="25.0" prefWidth="127.0" text="Ver Minhas Viagem" />
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="368.0" prefHeight="31.0" prefWidth="82.0" text="User Name" />
+                  <Label fx:id="userName" layoutX="105.0" layoutY="373.0" text="name" />
+                  <Label fx:id="txtPass" layoutX="18.0" layoutY="430.0" text="Passe" />
+                  <Label fx:id="lblPass" layoutX="107.0" layoutY="426.0" prefHeight="18.0" prefWidth="59.0" />
+                  <Label fx:id="txtVal" layoutX="16.0" layoutY="460.0" prefHeight="18.0" prefWidth="54.0" text="Validade" />
+                  <Label fx:id="lblVal" layoutX="105.0" layoutY="456.0" prefHeight="18.0" prefWidth="116.0" />
+                  <Label layoutX="18.0" layoutY="397.0" text="Nascimento" />
+                  <Label fx:id="lblBithday" layoutX="105.0" layoutY="397.0" text="name" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="406.0">
+               <children>
+                  <AnchorPane fx:id="anchorSelectTrip" prefHeight="570.0" prefWidth="546.0">
+                     <children>
+                        <ComboBox fx:id="selectDeparture" editable="true" layoutX="14.0" layoutY="44.0" prefWidth="150.0" promptText="Origem" />
+                        <ComboBox fx:id="selectArrival" editable="true" layoutX="182.0" layoutY="44.0" prefWidth="150.0" promptText="Destino" />
+                        <Button fx:id="btnSeeRoutes" layoutX="343.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnSeeRoutes" text="Planear" />
+                        <Label layoutX="182.0" layoutY="25.0" text="Destino" />
+                        <Label layoutX="14.0" layoutY="25.0" text="Origem" />
+                        <ImageView fitHeight="474.0" fitWidth="546.0" layoutX="14.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../resources/map.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchorCheckMyTrips" prefHeight="570.0" prefWidth="546.0" visible="false">
+                     <children>
+                                                <TableView fx:id="tableTrips" layoutX="53.0" layoutY="124.0" prefHeight="321.0" prefWidth="450.0">
+                                <columns>
+                                  <TableColumn fx:id="colIDTrip" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="colDeparture" prefWidth="117.0" text="Partida" />
+                                    <TableColumn fx:id="colArrival" prefWidth="140.0" text="Chegada" />
+                              <TableColumn fx:id="colDate" prefWidth="117.0" text="Data" />
+                                </columns>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                              </TableView>
+                        <Label layoutX="53.0" layoutY="466.0" prefHeight="35.0" prefWidth="59.0" text="Filtar">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDate" layoutX="112.0" layoutY="468.0" prefHeight="31.0" prefWidth="392.0" />
+                     </children>
+                  </AnchorPane>
+                      </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
