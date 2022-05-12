@@ -1,0 +1,2 @@
+# 5Estacoes-Train-Java
+It is a project developed at the university with colleagues, where we were asked to create a subway with the various stations, and we can buy tickets through a REST API. There is an administrator side where we can see the amount of money we have, client information and trips, and import new maps through JSON or XML. On the client side we have the possibility to choose the stations and we will be given the possible routes. After we choose the route, we have to pay and after that we receive the ticket in QR Code. It is also possible to see our trips.
